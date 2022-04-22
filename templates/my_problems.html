@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {% include "header.html"%}
+    <div class="wrap my_cards_wrap">
+        {% if size0 > 0 %} {% for i in massiv0 %}
+        <div class="card" style="position: relative;">
+            <form action="/print_card" method="POST">
+                <input type="text" name="problem_id" style="display: none;" value="6260ebc2ad4db99cd90f8294">
+                <button type="submit" style="height: 100%; width: 100%; position: absolute; background: rgba(0, 0, 0, 0); cursor: pointer;"></button>
+            </form>
+            <div class="" style="display: flex; justify-content: space-between;">
+                {% if i["diff"] == "0" %}
+                <div class="hard" style="background: #FFAF35"></div>
+                {% elif i["diff"] == "1" %}
+                <div class="hard" style="background: #FF622C"></div>
+                {% else %}
+                <div class="hard" style="background: #FF2525"></div>
+                {% endif %}
+                <img src="/static/css/img/points.png" alt="">
+            </div>
+            <p class="card_name">{{ i["name_of_problem"] }}</p>
+            <p class="card_dscr">{{ i["dscr_of_problem"] }}</p>
+            <div class="bottom_part" style="color: white; display: flex; justify-content: space-between; align-items: center;">
+                <div class="worker">
+                    <img src="/static/css/img/icon_prog.png" alt="">
+                    <p class="worker_name">{{ i["who"] }}</p>
+                </div>
+                <p class="last_date">{{ i["end_date"] }}</p>
+            </div>
+        </div>
+        {% endfor %} {% else %}
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <p style="color: white;">Кажется тут нет задач. Ну видимо сегодня отдыхаем!</p>
+            <img src="/static/css/img/super.png" alt="">
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

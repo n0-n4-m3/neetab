@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    {% include "header.html"%}
+    <div class="wrap" style="display: flex; flex-direction: column; align-items: center; color: white;">
+        <p style="font-size: 48px;"><span class="logo">Neetab</span> стремится обеспечить российских разработчиков удобным сервисом для планирования задач. </p>
+        <div class="team">
+            <div class="participant">
+                <img src="/static/css/img/Rectangle.png" alt="">
+                <div class="name">
+                    <p class="naming">
+                        <nobr>Суеубаев Тимофей</nobr>
+                    </p>
+                    <p style="font-size: 18px;">Программист</p>
+                </div>
+            </div>
+            <div class="participant">
+                <img src="/static/css/img/Rectangle.png" alt="">
+                <div class="name">
+                    <p class="naming">Белов Вадим</p>
+                    <p style="font-size: 18px;">Программист</p>
+                </div>
+            </div>
+            <div class="participant">
+                <img src="/static/css/img/Rectangle.png" alt="">
+                <div class="name">
+                    <p class="naming">Коровина Ульяна</p>
+                    <p style="font-size: 18px;">Project Manager</p>
+                </div>
+            </div>
+            <div class="participant">
+                <img src="/static/css/img/Rectangle.png" alt="">
+                <div class="name">
+                    <p class="naming">Борискина Алиса</p>
+                    <p style="font-size: 18px;">Дизайнер</p>
+                </div>
+            </div>
+        </div>
+        <div class="participant  nasta">
+            <img src="/static/css/img/Rectangle.png" alt="">
+            <div class="name">
+                <p class="naming">Слепенкова Анастасия</p>
+                <p style="font-size: 18px;">Маркетолог</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

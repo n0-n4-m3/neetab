@@ -1,0 +1,34 @@
+<style>
+    {
+        {
+            header_bloc
+        }
+    }
+</style>
+<div class="header">
+    <img src="/static/css/img/logo.png" alt="" class="logo">
+    <div class="nav">
+        <form action="/">
+            <button type="submit" class="nav_a" style="background: none;cursor: pointer">Главная</button>
+        </form>
+        <form action="my_problems" method="post">
+            <button type="submit" class="nav_a" style="background: none;cursor: pointer">Мои задачи</button>
+        </form>
+        <form action="about_us" method="post">
+            <button type="submit" class="nav_a" style="background: none;cursor: pointer">О нас</button>
+        </form>
+    </div>
+    <p class="first">{{user_login}}</p>
+    <div class="second" style="display: flex;">
+        <form method="post" action="/login_page">
+            <button class="login" style="cursor:pointer">Вход</button>
+        </form>
+        <div class="bord">
+            <div class="back">
+                <form method="post" action="/reg">
+                    <button class="reg" style="cursor:pointer">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

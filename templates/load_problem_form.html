@@ -1,0 +1,30 @@
+<html lang="ru">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+
+    <title>Add problem</title>
+</head>
+
+<body>
+    <p>{{ textik}}</p>
+    <form method="post" action="/add_probem">
+        <input type="text" name="priority" placeholder="Трудность задачи" />
+        <select name="role" id="">
+            <option>Программист</option>
+            <option>Маркетолог</option>
+            <option>Дизайнер</option>
+        </select>
+        <input type="text" name="problem_name" placeholder="Название задачи" />
+        <input type="text" name="problem_dscr" placeholder="Описание задачи" />
+        <input type="text" name="make_date" placeholder="Добавлено" />
+        <input type="text" name="dead_date" placeholder="Дедлайн" />
+
+        <input type="submit" value="Добавить задачу" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {% include "header.html"%}
+    <div class="wrap" style="padding: 50px 400px;">
+        <p class="create_title">Создать задачу</p>
+        <form action="/add_probem" method="post" class="add_problem">
+            <p>Название</p>
+            <div class="login_border">
+                <input type="text" name="problem_name" placeholder="Введите название">
+            </div>
+            <p>Описание</p>
+            <div class="login_border">
+                <input type="text" name="problem_dscr" placeholder="Введите описание">
+            </div>
+            <div class="" style="display: flex; justify-content: space-between;">
+                <div class="role_input">
+                    <p>Роль исполняющего</p>
+                    <div class="login_border">
+                        <select name="who" id="" class="role">
+                            <option value="Программист">Программист</option>
+                            <option value="Дизайнер">Дизайнер</option>
+                            <option value="Маркетолог">Маркетолог</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="diff_input">
+                    <p>Приоритет</p>
+                    <div class="login_border">
+                        <select name="priority" id="" class="role">
+                            <option value="0">Простой</option>
+                            <option value="1">Средний</option>
+                            <option value="2">Сложный</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <p>Даты</p>
+            <div class="" style="display: flex; justify-content: space-between;">
+                <input type="date" name="make_date" placeholder="Дата создания задачи" style="margin-right: 10px;">
+                <input type="date" name="dead_date" placeholder="Дедлайн" style="margin-left: 10px;">
+            </div>
+            <div class="login_border" style="display: flex;">
+                <input type="text" name="git" placeholder="Вставьте ссылку на репозиторий">
+            </div>
+            <button type="submit" class="make_new_problem">Создать</button>
+        </form>
+    </div>
+</body>
+
+</html>
