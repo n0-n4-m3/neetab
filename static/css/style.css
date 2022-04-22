@@ -96,6 +96,10 @@ button {
   min-height: 750px;
 }
 
+.comment a {
+  color: white;
+}
+
 .substrate {
   padding: 10px 15px;
   background: #130D20;

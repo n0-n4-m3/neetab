@@ -9,7 +9,6 @@ display = "background-image:none;position:absolute;left:0;right:0;top:0;bottom:0
 blur = ".blur {filter: blur(0px)}"
 make_new_problem = ".form_for_add_card {display: none;}"
 user_login = ""
-header_bloc = ""
 
 def header():
 #    users = db.Users

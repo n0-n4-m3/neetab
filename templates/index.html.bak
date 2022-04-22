@@ -13,23 +13,9 @@
 
     <title>Document</title>
     <style>
-        {
-            {
-                blur
-            }
-        }
-        
-        {
-            {
-                make_new_problem
-            }
-        }
-        
-        {
-            {
-                header_bloc
-            }
-        }
+        {{blur}}
+        {{make_new_problem}}
+        {{header_bloc}}
     </style>
     </style>
 </head>
@@ -213,13 +199,13 @@
                 </div>
             </div>
             <div class="line" style="height: 2px; background: #7B6D93; margin: 40px 0; "></div>
-            <a class="popup_dscr_text " href={{card[ 'git']}}>{{card['git']}}</a>
+            <a class="comments " style="color: white; margin-bottom: 10px;" href={{card[ 'git']}}>{{card['git']}}</a>
             <div class="comments ">
                 <p class="comments_title ">Комментарии</p>
                 {% for i in git%}
                 <div class="comment">
                     <p class="comment_text ">{{i['mess']}}</p>
-                    <a class="popup_dscr_text " href={{i[ 'url']}}>{{i['url']}}</a>
+                    <a class="popup_dscr_text " style="margin-top: 10px; " href={{i[ 'url']}}>{{i['url']}}</a>
                     <p class="comment_date ">
                         <nobr>{{i['when']}}</nobr>
                     </p>
