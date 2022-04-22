@@ -11,21 +11,25 @@ make_new_problem = ".form_for_add_card {display: none;}"
 user_login = ""
 
 def header():
-    print("dsfsdfs")
+    users = db.Users
+    if users.find_one({"_id": ObjectId(session["user"])})["user_role"] == "Тимлид":
+        make_new_problem = ".form_for_add_card {display: inline;}"
+    else:
+        make_new_problem = ".form_for_add_card {display: none;}"
     if "user" in session:
         users = db.Users
         print(session["user"])
         user_login = users.find_one({"_id": ObjectId(session["user"])})["user_login"]
         header_bloc = ".first {display: inline;} .second {display: none;}"
-        if users.find_one({"_id": ObjectId(session["user"])})["user_role"] == "Тимлид":
-            make_new_problem = ".form_for_add_card {display: inline;}"
     else:
         user_login = ""
         header_bloc = ".first {display: none;} .second {display: inline;}"
-    return render_template("header.html",user_login=user_login,header_bloc=header_bloc)
+
+    return render_template("header.html",user_login=user_login,header_bloc=header_bloc, make_new_problem=make_new_problem)
 
 @app.route('/', methods=["GET"])
 def index():
+    header()
     if(display != "background-image:none;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;display:block"):
         data = db.Problems
         massiv0 = data.find({"status": 0})
