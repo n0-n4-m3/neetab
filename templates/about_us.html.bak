@@ -34,14 +34,14 @@
                 </div>
             </div>
             <div class="participant">
-                <img src="/static/css/img/Ульяна.png" alt="">
+                <img src="/static/css/img/Rectangle.png" alt="">
                 <div class="name">
                     <p class="naming">Коровина Ульяна</p>
                     <p style="font-size: 18px;">Project Manager</p>
                 </div>
             </div>
             <div class="participant">
-                <img src="/static/css/img/Алиса.png" alt="">
+                <img src="/static/css/img/Rectangle.png" alt="">
                 <div class="name">
                     <p class="naming">Борискина Алиса</p>
                     <p style="font-size: 18px;">Дизайнер</p>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="participant  nasta">
-            <img src="/static/css/img/Настя.png" alt="">
+            <img src="/static/css/img/Rectangle.png" alt="">
             <div class="name">
                 <p class="naming">Слепенкова Анастасия</p>
                 <p style="font-size: 18px;">Маркетолог</p>
